@@ -1,0 +1,172 @@
+.coupon_info_container{
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: var(--font-label-lg-size);
+    line-height: 30px;
+    background-color: var(--color-error-container);
+    z-index: 99;
+}
+.coupon_info_container > button{
+    position: absolute;
+    right: 20px;
+    line-height: 30px;
+    background: unset;
+    border: none;
+}
+/***********************************************************/
+header{
+    position: absolute;
+    width: 100vw;
+    top: 30px;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 48px;
+}
+
+header > .home_btn > img{
+    width: 55px;
+    height: 55px;
+}
+
+header > .main_menu{
+    display: flex;
+}
+
+header > .main_menu > li{
+    padding: 4px 12px;
+    cursor: pointer;
+    /*background-color: black;*/
+}
+header > .main_menu > li > a{
+    text-decoration: none; /*underline 제거*/
+    color: white;
+    font-size: var(--font-body-lg-size);
+    font-weight: 500;
+    line-height: var(--font-body-lg-line-height);
+    letter-spacing: var(--font-body-lg-letter-spacing);
+    padding: 4px 0;
+    /* 마우스 올렸을 시 */
+    &:hover{
+        border-bottom: 2px solid white;
+    }
+}
+
+header > nav > ul{
+    display: flex;
+}
+
+header > nav li{
+    padding: 4px 8px;
+}
+
+header > nav a{
+    text-decoration: none; /*underline 제거*/
+    color: white;
+    font-size: var(--font-body-lg-size);
+    font-weight: var(--font-body-lg-weight);
+    line-height: var(--font-body-lg-line-height);
+    letter-spacing: var(--font-body-lg-letter-spacing);
+    padding: 4px 0;
+}
+/****************************************************/
+
+main > .hero_section > video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+/************************************************/
+.trending_section > h2{
+    font-size: var(--font-headline-lg-size);
+    font-weight: var(--font-headline-lg-weight);
+    line-height: var(--font-headline-lg-line-height);
+    letter-spacing: var(--font-headline-lg-letter-spacing);
+}
+
+.trending_section > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trending_section > div > ul{
+    display: flex;
+    margin: 16px 0;
+}
+.trending_section > div > ul > li{
+    margin-right: 16px;
+    border-bottom: 1px solid black;
+}
+
+.trending_section button{
+    font-size: var(--font-body-lg-size);
+    font-weight: var(--font-body-lg-weight);
+    background: unset;
+    border: none;
+    cursor: pointer;
+}
+
+.trending_section .arrow_button{
+    color: var(--color-primary);
+    padding: 4px 32px;
+    border: 1px solid var(--color-black);
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+
+.trending_section > ul{
+    display: flex;
+}
+.trending_section > ul > li{
+    width: 400px;
+    margin-right: 8px;
+}
+.trending_section > ul > li > a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--color-black);
+}
+.trending_section .image_container > img{
+    width: 100%;
+}
+.trending_section .tag{
+    font-size: var(--font-label-sm-size);
+    color: var(--color-secondary);
+    margin: 2px 0;
+}
+.trending_section .title{
+    font-size: var(--font-body-md-size);
+    color: var(--color-primary);
+    margin: 2px 0;
+}
+.trending_section .price{
+    font-size: var(--font-body-md-size);
+    color: var(--color-primary);
+}
+
+
+
+
+
+
+
+/************************************************/
+
+main .image_section1{
+    display: flex;
+}
+main .image_section1 img{
+    width: 100%;
+}
+main .image_section1 img:first-child{
+    margin-right: 8px;
+}
+
+
+
