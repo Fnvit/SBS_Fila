@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 리스트</title>
+
+    <link rel="stylesheet" href="../../css/public.css">
+    <link rel="stylesheet" href="../../css/product/list.css">
+    <script src="https://kit.fontawesome.com/d19fdaba43.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <main>
+        <section id="header">
+            <nav class="bread_crumb">
+                <ul>
+                    <li><a href="#">MEN</a></li>
+                    <li><a href="#">의류</a></li>
+                    <li><a href="#">전체보기</a></li>
+                </ul>
+            </nav>
+
+            <div>
+                <h1>전체보기</h1>
+                <span class="total_count">323</span>
+            </div>
+
+            <ul class="list">
+                <li><a href="#">전체보기</a></li>
+                <li><a href="#">반팔</a></li>
+                <li><a href="#">바람막이/집업</a></li>
+                <li><a href="#">긴팔</a></li>
+                <li><a href="#">맨투맨/후디</a></li>
+                <li><a href="#">쇼츠</a></li>
+                <li><a href="#">팬츠</a></li>
+                <li><a href="#">테니스</a></li>
+                <li><a href="#">러닝</a></li>
+                <li><a href="#">트레이닝 셋업</a></li>
+            </ul>
+        </section>
+
+        <section id="main">
+            <div class="filter">
+                <button type="button">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>필터 보기</span>
+                </button>
+
+                <div class="select_container">
+                    <div>
+                        <span>신상품순</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <label>
+                        <select>
+                            <option selected>신상품순</option>
+                            <option>리뷰순</option>
+                            <option>판매순</option>
+                            <option>낮은가격순</option>
+                            <option>높은가격순</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+
+            <ul class="product_list">
+               <li class="card product">
+                   <a href="#">
+                       <div class="image_container">
+                           <img src="https://cdn.shopify.com/s/files/1/0736/2350/2884/files/1100FS262RS01X037061_61.jpg?v=1776409243&width=165 165w, https://cdn.shopify.com/s/files/1/0736/2350/2884/files/1100FS262RS01X037061_61.jpg?v=1776409243&width=360 360w, https://cdn.shopify.com/s/files/1/0736/2350/2884/files/1100FS262RS01X037061_61.jpg?v=1776409243&width=533 533w, https://cdn.shopify.com/s/files/1/0736/2350/2884/files/1100FS262RS01X037061_61.jpg?v=1776409243&width=720 720w, https://cdn.shopify.com/s/files/1/0736/2350/2884/files/1100FS262RS01X037061_61.jpg?v=1776409243&width=940 940w, https://cdn.shopify.com/s/files/1/0736/2350/2884/files/1100FS262RS01X037061_61.jpg?v=1776409243&width=1066 1066w, https://cdn.shopify.com/s/files/1/0736/2350/2884/files/1100FS262RS01X037061_61.jpg?v=1776409243&width=1500 1500w, https://cdn.shopify.com/s/files/1/0736/2350/2884/files/1100FS262RS01X037061_61.jpg?v=1776409243 1500w" alt="#">
+                           <div class="more">
+                               <div>
+                                   <span>QUICK ADD</span>
+                                   <i class="fa-solid fa-bag-shopping"></i>
+                               </div>
+                               <button type="button" active="">XS(085)</button>
+                               <button type="button">S(090)</button>
+                               <button type="button">M(095)</button>
+                               <button type="button">L(100)</button>
+                           </div>
+
+
+                       </div>
+                   </a>
+                   <div class="group">
+                       <div class="image_container"><img src="https://cdn.shopify.com/s/files/1/0736/2350/2884/files/01_c31fb63a-b684-49fb-840f-eb5bc5363aab.jpg?v=1776409226&width=100" alt="#"></div>
+                       <div class="image_container"><img src="https://cdn.shopify.com/s/files/1/0736/2350/2884/files/01_5a169637-89bb-4ee9-9c8c-d69db45678ee.jpg?v=1778630434&width=100" alt="#"></div>
+                   </div>
+                   <span class="tag">공용</span>
+                   <a href="#">
+                       <h3>&lt;우즈 착용&gt; 마이티셔츠 유니 세미오버핏</h3>
+                   </a>
+                   <div class="price">
+                       <b class="sale_price">49,900원</b>
+                       <s class="original_price">100,000원</s>
+                       <span class="percent">99%</span>
+                   </div>
+               </li>
+            </ul>
+
+            <nav class="pagination">
+                <ol>
+                    <li><a href="#" class="page" active="">1</a></li>
+                    <li><a href="#" class="page">2</a></li>
+                    <li><a href="#" class="page">3</a></li>
+                    <li><a href="#" class="page">4</a></li>
+                    <li><a href="#" class="page">5</a></li>
+                    <li class="page">...</li>
+                    <li><a href="#" class="page">17</a></li>
+                    <li><i class="fa-solid fa-angle-right"></i></li>
+                </ol>
+            </nav>
+        </section>
+    </main>
+</body>
+</html>

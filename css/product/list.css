@@ -1,0 +1,215 @@
+.image_container > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#header > .bread_crumb{
+    margin: 24px 0;
+}
+
+#header > .bread_crumb ul{
+    display: flex;
+}
+#header > .bread_crumb li{
+    color: var(--color-primary);
+    &:not(:last-child)::after{
+        content: ">";
+        margin: 0 8px;
+        text-align: center;
+    }
+}
+#header > .bread_crumb a{
+    color: inherit;
+    text-decoration: none;
+}
+#header > .bread_crumb li:last-child > a{
+    text-decoration: underline;
+}
+
+#header h1{
+    display: inline-block;
+    font-size: var(--font-display-lg-size);
+}
+#header .total_count{
+    font-weight: bold;
+}
+#header .list{
+    display: flex;
+    gap: 24px;
+    margin: 24px 0;
+}
+#header .list a{
+    display: block;
+    text-decoration: none;
+    font-size: var(--font-headline-md-size);
+    padding: 4px 0;
+    font-weight: bold;
+    color: var(--color-secondary-fixed-dim);
+}
+#header .list > li:first-child > a{
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+/***************************************/
+#main .filter {
+    display: flex;
+    gap: 8px;
+    margin: 24px 0;
+}
+#main .filter > button{
+    border: 1px solid var(--color-primary);
+    background-color: unset;
+    font-size: var(--font-body-md-size);
+    border-radius: 24px;
+    padding: 8px 16px;
+}
+#main .filter i:first-child{
+    margin-right: 4px;
+}
+#main .filter i:last-child{
+    margin-left: 4px;
+}
+#main .select_container{
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+
+    border: 1px solid var(--color-primary);
+    background-color: unset;
+    font-size: var(--font-body-md-size);
+    border-radius: 24px;
+    overflow: hidden;
+}
+#main .filter > div{
+    padding: 8px 16px;
+}
+#main .filter label{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+#main .filter select{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border: unset;
+    outline: none;
+    font-size: inherit;
+}
+/***************************************/
+#main > .product_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+}
+
+#main > .product_list a{
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+#main .product .image_container{
+    position: relative;
+    padding: 32px;
+    height: 400px;
+}
+#main .product .image_container > img{
+    position: absolute;
+    height: unset;
+}
+#main .product .more{
+    position: absolute;
+    bottom: 0;
+    padding: 12px;
+    background-color: var(--color-primary-container);
+    color: var(--color-secondary-fixed-dim);
+    width: 100%;
+    text-align: center;
+}
+#main .product .more > div{
+    font-size: var(--font-body-lg-size);
+    margin-bottom: 12px;
+}
+#main .product .more button{
+    font-size: var(--font-body-md-size);
+    border: none;
+    border-radius: 24px;
+    padding: 4px 16px;
+    background-color: inherit;
+    color: inherit;
+    &[active]{
+        background-color: white;
+    }
+}
+
+#main .product .group{
+    display: flex;
+    gap: 8px;
+}
+#main .product .group > .image_container{
+    width: 80px;
+}
+
+#main .product .tag{
+    color: var(--color-secondary);
+    font-size: var(--font-label-lg-size);
+}
+#main .product h3{
+    color: var(--color-primary);
+    font-size: var(--font-headline-md-size);
+}
+#main .product b{
+    color: var(--color-primary);
+    font-size: var(--font-headline-md-size);
+}
+
+#main .product .original_price{
+    color: var(--color-secondary);
+}
+
+#main .product .percent{
+    color: var(--color-error);
+}
+/*************************************************/
+#main .pagination{
+    margin-top: 100px;
+}
+#main .pagination > ol{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+#main .pagination .page{
+    border-radius: 24px;
+    border: none;
+    width: 56px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+
+    &[active]{
+        color: white;
+        background-color: var(--color-primary);
+    }
+}
+#main .pagination li.page{
+    background-color: unset;
+}
+#main .pagination a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+
+
+
+
+
