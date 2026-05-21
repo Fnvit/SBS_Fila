@@ -257,6 +257,136 @@
     font-size: var(--font-body-md-size);
     color: var(--color-secondary);
 }
+/*******************************************/
+#checkpoint .card{
+    display: inline-block;
+    width: 320px;
+    margin-right: 16px;
+}
+#checkpoint .card .image_container{
+    aspect-ratio: 1 / 1;
+}
+#checkpoint .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+#model_cut .card{
+    display: inline-block;
+    width: 320px;
+    margin-right: 16px;
+}
+#model_cut .card .image_container{
+    aspect-ratio: 1 / 1;
+}
+#model_cut .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/***************************/
+#review{
+
+}
+#review .rating{
+    display: flex;
+}
+#review .average_rating{
+    text-align: center;
+}
+#review .average_rating > span{
+    display: block;
+}
+
+
+
+#review .total_rating .stars{
+    display: inline-block;
+    color: yellow;
+}
+/*****************************/
+#review .photo_video > .header{
+    display: flex;
+    justify-content: space-between;
+}
+#review .photo_video > ul{
+    display: grid;
+    grid-template-columns: repeat(8, minmax(200px, 1fr));
+}
+#review .photo_video .image_container{
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+#review .photo_video img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#review .photo_video i{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: white;
+}
+/***************************************/
+#review .filter > div{
+    display: flex;
+    justify-content: space-between;
+}
+#review .filter .search{
+    background-color: white;
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+    padding: 4px 12px;
+}
+#review .filter .search > input{
+    border: none;
+    background: none;
+}
+/**************************/
+#review .reviews .item{
+    display: flex;
+}
+#review .reviews .item .contents{
+    flex: 1;
+}
+#review .reviews .item .contents .user{
+    display: flex;
+    align-items: center;
+}
+#review .reviews .item .contents .user_icon{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+#review .reviews .item .contents .user_icon > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+#review .reviews .item .images{
+    display: flex;
+}
+#review .reviews .item .images > .image_button{
+    width: 100px;
+    height: 100px;
+}
+#review .reviews .item .images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 
@@ -276,19 +406,6 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
