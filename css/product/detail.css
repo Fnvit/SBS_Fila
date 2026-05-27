@@ -1,3 +1,7 @@
+:root{
+    --main-section-padding: 48px;
+}
+
 .tag{
     border-radius: 32px;
     border: 1px solid black;
@@ -31,7 +35,7 @@
 #main > div{
     flex: 1;
     height: 100%;
-    background-color: beige;
+    background-color: var(--color-platinum-beige);
 }
 #main > div > img{
     width: 100%;
@@ -114,7 +118,7 @@
 }
 #detail > div{
     flex: 1;
-    padding: 48px;
+    padding: var(--main-section-padding);
 }
 /****************************************/
 #detail .image_container{
@@ -249,8 +253,6 @@
 #detail .accordion .spec:nth-child(3) .child{
     transform: translateX(-66%);
 }
-
-
 #detail .accordion .progress_container >div:last-child{
     display: flex;
     justify-content: space-between;
@@ -261,42 +263,52 @@
 #detail_more{
     background-color: var(--color-primary-container);
     color: white;
+    padding: var(--main-section-padding);
+}
+#detail_more h2{
+    margin-bottom: 8px;
+}
+#detail_more .card{
+    display: inline-block;
+    width: 320px;
+    margin-right: 16px;
+}
+#detail_more .card .image_container{
+    aspect-ratio: 1 / 1;
+}
+#detail_more .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #checkpoint{
     margin-bottom: 48px;
 }
-#checkpoint .card{
-    display: inline-block;
-    width: 320px;
-    margin-right: 16px;
+#checkpoint .card h3{
+    margin: 8px 0;
 }
-#checkpoint .card .image_container{
-    aspect-ratio: 1 / 1;
-}
-#checkpoint .card img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#model_cut > p{
+    margin-bottom: 8px;
 }
 
 
 
-#model_cut .card{
-    display: inline-block;
-    width: 320px;
-    margin-right: 16px;
-}
-#model_cut .card .image_container{
-    aspect-ratio: 1 / 1;
-}
-#model_cut .card img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+
+
+
+
 /***************************/
 #review{
-
+    padding: var(--main-section-padding);
+}
+#review button{
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: var(--font-body-md-size);
+    cursor: pointer;
+    padding: 4px 12px;
 }
 #review > h2{
     margin-bottom: 16px;
@@ -304,11 +316,6 @@
 #review > button{
     width: 300px;
     height: 40px;
-    border: none;
-    border-radius: 4px;
-    background-color: var(--color-primary);
-    color: white;
-    font-size: var(--font-body-md-size);
     margin-bottom: 16px;
 }
 
@@ -330,6 +337,7 @@
 #review .average_rating > h3{
     font-size: var(--font-headline-lg-size);
     margin-bottom: 8px;
+    color: var(--color-medium-grey);
 }
 #review .average_rating > span{
     display: block;
@@ -352,7 +360,7 @@
 }
 #review .total_rating .stars{
     display: inline-block;
-    color: yellow;
+    color: var(--color-medium-grey);
 }
 #review .total_rating .count{
     margin-left: 16px;
@@ -361,11 +369,19 @@
 #review .photo_video > .header{
     display: flex;
     justify-content: space-between;
+    font-size: var(--font-body-md-size);
 }
+#review .photo_video > .header > button{
+
+}
+
+
 #review .photo_video > ul{
     display: grid;
+    margin: 16px 0;
     gap: 16px;
     grid-template-columns: repeat(8, minmax(200px, 1fr));
+    overflow: hidden;
 }
 #review .photo_video .image_container{
     position: relative;
@@ -385,9 +401,14 @@
     color: white;
 }
 /***************************************/
+#review .filter{
+    border-top: 1px solid var(--color-primary-fixed-dim);
+    border-bottom: 1px solid var(--color-primary-fixed-dim);
+}
 #review .filter > div{
     display: flex;
     justify-content: space-between;
+    margin: 16px 0;
 }
 #review .filter .search{
     background-color: white;
@@ -402,6 +423,10 @@
 /**************************/
 #review .reviews .item{
     display: flex;
+    &:not(:last-child){
+        padding: 16px 0;
+        border-bottom: 1px solid var(--color-primary-fixed);
+    }
 }
 #review .reviews .item .contents{
     flex: 1;
@@ -409,6 +434,7 @@
 #review .reviews .item .contents .user{
     display: flex;
     align-items: center;
+    margin-bottom: 8px;
 }
 #review .reviews .item .contents .user_icon{
     display: inline-block;
@@ -424,11 +450,25 @@
     object-fit: cover;
 }
 
-
-
-
+#review .reviews .item .stars{
+    margin-bottom: 4px;
+}
+#review .reviews .item .date{
+    font-size: var(--font-body-md-size);
+    color: var(--color-secondary);
+}
+#review .reviews .item .options{
+    margin: 4px 0;
+}
+#review .reviews .item .options > span{
+    display: block;
+}
+#review .reviews .item .content{
+    margin: 8px 0;
+}
 #review .reviews .item .images{
     display: flex;
+    gap: 4px;
 }
 #review .reviews .item .images > .image_button{
     width: 100px;

@@ -27,7 +27,7 @@
     text-align: center;
     font-size: var(--font-label-lg-size);
     line-height: 30px;
-    background-color: var(--color-error-container);
+    background-color: var(--color-platinum-beige);
     z-index: 99;
 }
 .coupon_info_container > button{
@@ -69,8 +69,16 @@ main > .hero_section > video{
 }
 .trending_section > div > ul > li{
     margin-right: 16px;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid transparent;
 }
+.trending_section > div > ul > li.active{
+    border-bottom: 2px solid black;
+    & > button{
+        font-weight: bold;
+    }
+}
+
+
 .trending_section button{
     font-size: var(--font-body-lg-size);
     font-weight: var(--font-body-lg-weight);

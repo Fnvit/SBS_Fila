@@ -1,12 +1,37 @@
 :root{
     --modal-form-padding: 32px;
 }
-
+.modal_container [type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    /*background-color: black;*/
+    background-color: white;
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+}
+.modal_container input[type="checkbox"]:checked {
+    background-color: black; /* 체크 시 배경색 */
+    border-color: black;
+}
+/* 체크 표시 아이콘 생성 */
+.modal_container input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
 .modal_container{
     top: 0;
     z-index: 99;
     position: fixed;
-    display: flex;
     display: none;
     justify-content: center;
     align-items: center;
@@ -14,12 +39,15 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
 }
+.modal_container.active{
+    display: flex;
+}
 
 .modal{
     display: flex;
     width: 70%;
     height: 90%;
-    background-color: beige;
+    background-color: var(--color-soft-beige);
 }
 .modal > section{
     flex: 1;
@@ -39,15 +67,25 @@
 .modal .form_section .select_container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 24px var(--modal-form-padding);
     font-size: var(--font-body-lg-size);
-    align-items: center;
     border-bottom: 1.2px solid var(--color-primary);
+}
+.modal .form_section .select_container > div{
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 .modal .form_section .select_container .close_btn{
     background: none;
     border: none;
     font-size: inherit;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    &:hover{
+        color: var(--color-error);
+    }
 }
 /***********************************************/
 .modal .form_section .product_container{
@@ -65,7 +103,7 @@
     margin-bottom: 20px;
 }
 .modal .form_section .product_item input{
-    margin-right: 8px;
+    margin-right: 12px;
 }
 .modal .form_section .product_item label{
     display: grid;
@@ -128,6 +166,7 @@
     font-weight: bold;
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 
 
