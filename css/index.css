@@ -17,6 +17,10 @@
 :root{
     --main-x-padding: 52px;
     --main-y-padding: 52px;
+
+
+    --main-x-sm-padding : 28px;
+    --main-y-sm-padding : 28px;
 }
 
 /*************************************************/
@@ -48,6 +52,7 @@ main > .hero_section > video{
 /************************************************/
 .trending_section{
     padding: var(--main-y-padding) var(--main-x-padding);
+    overflow: hidden;
 }
 
 .trending_section > h2{
@@ -89,10 +94,11 @@ main > .hero_section > video{
 
 
 .trending_section > ul{
-    display: flex;
+    display: inline-flex;
+    overflow: hidden;
 }
 .trending_section > ul > li{
-    width: 400px;
+    width: 250px;
     margin-right: 8px;
 }
 .trending_section > ul > li > a{
@@ -126,6 +132,8 @@ main > .hero_section > video{
     height: 100%;
     padding: 80px;
     background-color: black;
+    align-items: stretch;
+
 }
 .edit_section > h2{
     position: absolute;
@@ -163,6 +171,9 @@ main > .hero_section > video{
     display: flex;
     flex: 1;
     align-items: center;
+    /*background-color: beige;*/
+    min-width: 0;
+    container-type: inline-size;
 }
 
 .edit_section > .label_container a{
@@ -254,20 +265,25 @@ main > .hero_section > video{
 
 /************************************************/
 .information3_section{
+    width: 100%;
     padding: var(--main-y-padding) var(--main-x-padding);
 }
 .information3_section > p{
     text-align: center;
     font-size: var(--font-headline-md-size);
     margin-bottom: 52px;
+    word-break: keep-all;
 }
 .information3_section .image_container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
 }
-.information3_section .image_container img{
-    flex: 1;
+.information3_section img{
+    /*flex: 1;*/
+    width: 100%;
     height: 100%;
-    object-fit: cover;
+    /*object-fit: cover;*/
 }
 .information3_section .image_container img:first-child{
     margin-right: 8px;
@@ -395,4 +411,348 @@ footer hr{
 .site_information{
     font-size: var(--font-body-md-size);
     text-align: right;
+}
+
+
+
+/***********************************************************************/
+@media screen and (max-width: 1024px) {
+    .edit_section{
+        display: flex;
+        padding: var(--main-x-padding) 0;
+        flex-direction: column;
+        & > h2{
+            font-size: 160px;
+            z-index: 1;
+        }
+        & .image_container {
+            padding: 0 var(--main-x-padding);
+            & .sub{
+                right: var(--main-x-padding);
+            }
+        }
+        & .label_container > div{
+            & a{
+                font-size: var(--font-headline-lg-size);
+            }
+        }
+    }
+
+    .information1_section{
+        & .information{
+            & > p{
+                font-size: 20px;
+            }
+        }
+    }
+
+    .information2_section{
+        /*height: 360px;*/
+        /*padding: var(--main-x-sm-padding) var(--main-y-sm-padding);*/
+        & img.logo{
+            margin-bottom: var(--main-y-padding);
+        }
+    }
+    .information2_section > div:first-child{
+        position: relative;
+        flex: 2;
+    }
+    .information2_section .information{
+        font-size: 24px;
+    }
+}
+
+
+/***********************************************************************/
+@media screen and (max-width: 768px) {
+    .edit_section{
+        & > h2{
+            font-size: 100px;
+            z-index: 1;
+        }
+    }
+
+
+    .trending_section{
+        & > div{
+            display: block;
+            & > ul{
+                display: inline-flex;
+                flex-wrap: wrap;
+                gap: 14px;
+            }
+        }
+    }
+
+    .information1_section{
+        & h2{
+            font-size: 40px;
+        }
+        & > div {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 20rem);
+            & > a{
+                text-decoration: none;
+            }
+            & .information{
+                position: relative;
+                & h3{
+                    font-size: 36px;
+                }
+                & > p{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    footer{
+        & > hr{
+            margin: var(--main-y-sm-padding) 0;
+        }
+        & > div:first-child{
+            display: block;
+            & .site_nav{
+                & > div{
+                    flex: 1;
+                    width: unset;
+                    margin-bottom: var(--main-y-sm-padding);
+                }
+            }
+        }
+        & > div:last-child{
+            display: block;
+            & > section{
+                margin-bottom: var(--main-y-sm-padding);
+                font-size: 14px;
+            }
+            & .site_information{
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+/***********************************************************************/
+@media screen and (max-width: 480px) {
+    button{
+        padding: 4px 24px!important;
+        font-size: 16px!important;
+        right: var(--main-x-sm-padding)!important;
+        bottom: var(--main-y-sm-padding)!important;
+    }
+
+
+    .trending_section{
+        padding: var(--main-x-sm-padding) var(--main-y-sm-padding);
+        & > h2{
+            font-size: 28px;
+        }
+        & > div{
+            display: block;
+            & > ul{
+                display: inline-flex;
+                flex-wrap: wrap;
+                margin: 10px 0;
+                gap: 8px;
+                & li{
+                    margin: unset;
+                }
+                & button{
+                    padding: unset!important;
+                    font-size: 16px!important;
+                }
+            }
+            & .arrow_button_container{
+                display: none;
+            }
+        }
+        & > ul > li{
+            width: 160px;
+            & .tag{
+                font-size: 14px;
+            }
+            & .price{
+                font-size: 16px;
+            }
+            & .title{
+                font-size: 16px;
+            }
+        }
+    }
+
+    .edit_section{
+        display: flex;
+        padding: var(--main-x-sm-padding) 0;
+        flex-direction: column;
+        & > h2{
+            font-size: 80px;
+            z-index: 1;
+        }
+        & .image_container {
+            padding: 0 var(--main-y-sm-padding);
+            & .sub{
+                right: 12px;
+            }
+        }
+        & .label_container{
+            padding: var(--main-x-sm-padding) var(--main-y-sm-padding);
+            & > div {
+                & a {
+                    font-size: 20px;
+                }
+            }
+        }
+
+    }
+
+    .information1_section{
+        padding: var(--main-y-sm-padding) var(--main-x-sm-padding);
+
+        & h2{
+            font-size: 30px;
+        }
+        & > div {
+            & > a{
+                text-decoration: none;
+                & .information{
+                    position: relative;
+                    padding: var(--main-x-sm-padding) var(--main-y-sm-padding);
+                    & h3{
+                        font-size: 25px;
+                    }
+                    & > p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .information2_section{
+        height: 100%;
+        display: block;
+        position: relative;
+        flex-direction: column;
+
+        & > div:first-child{
+            display: flex;
+            position: static;
+            padding: var(--main-x-sm-padding) var(--main-y-sm-padding);
+            gap: var(--main-x-sm-padding);
+            & img.logo{
+                grid-area: logo;
+                margin: unset;
+            }
+            & .information{
+                grid-area: information;
+                position: relative;
+                font-size: 16px;
+            }
+            & > a{
+                grid-area: link;
+                position: absolute;
+                bottom: var(--main-x-sm-padding);
+                right: var(--main-x-sm-padding);
+                z-index: 1;
+            }
+        }
+        & > div:last-child{
+            display: block;
+            height: 260px;
+        }
+    }
+
+    .information3_section{
+        padding: var(--main-y-sm-padding) var(--main-x-sm-padding);
+        & > p {
+            font-size: 20px;
+            margin-bottom: var(--main-y-sm-padding);
+        }
+        & > .image_container{
+            display: block;
+            & > img{
+                display: block;
+                &:first-child{
+                    margin-bottom: var(--main-y-sm-padding);
+                }
+            }
+        }
+    }
+
+    .information4_section {
+        padding: var(--main-x-sm-padding) var(--main-x-sm-padding);
+        & > div {
+            display: block;
+
+            & > h2 {
+                font-size: 40px;
+                margin-bottom: 8px;
+            }
+        }
+        & .slide_wrapper > .slide_container{
+            /*display: inline-flex;*/
+            /*overflow: hidden;*/
+            height:400px;
+            overflow-y: scroll;
+            flex-direction: column;
+
+            & > li > img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+
+    footer{
+
+        & > hr{
+            margin: var(--main-y-sm-padding) 0;
+        }
+        & > div:first-child{
+            display: block;
+            & .site_nav{
+                & > div{
+                    flex: 1;
+                    width: unset;
+                    margin-bottom: var(--main-y-sm-padding);
+                }
+                & h4{
+                    font-size: 14px;
+                }
+                & li{
+                    font-size: 12px;
+                }
+            }
+        }
+        & .sns_nav{
+            & li{
+                margin-right: 10px;
+            }
+            & a{
+                width: 28px;
+                height: 28px;
+            }
+        }
+        & .me_information .name{
+            font-size: 12px;
+        }
+        & .me_information .email{
+            font-size: 12px;
+        }
+        & .me_information .text{
+            font-size: 12px;
+        }
+
+        & > div:last-child{
+            & > section{
+                margin-bottom: var(--main-y-sm-padding);
+                font-size: 10px;
+            }
+        }
+    }
+
 }
